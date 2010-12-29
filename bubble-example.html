@@ -1,0 +1,170 @@
+<html>
+	<head>
+		<title>Speech Bubbles</title>
+		<style>
+			.bubble-wrapper {
+				display: inline-block;
+				position: relative;
+				margin: 1em;
+			}
+			.bubble {
+				padding: 1em;
+				background-color: #333;
+				color: #d3d3d3;
+				-webkit-border-radius: 8px;
+				-moz-border-radius: 8px;
+				border-radius: 8px;
+			}
+			.anchor.bottom {
+				text-align: right;
+				margin-top: 1em;
+			}
+			.anchor:before {
+				content: '';
+				height: 0;
+				width: 0;
+				font-size: 10px;
+				display: inline-block;
+			}
+			.anchor.bottom:before {
+				position: relative;
+				right: -20%;
+				top: -1.6em;
+				border-right: 2em solid #333; 
+				border-bottom: 2em solid #FFF;
+				border-bottom: 2em solid transparent;
+			}
+			.anchor.bottom.reverse:before {
+				border-right: 0;
+				right: -40%;
+				border-left: 2em solid #333; 
+				border-bottom: 2em solid #FFF;
+				border-bottom: 2em solid transparent;
+			}
+			.bubble.right {
+				padding-right: 0;
+				display: inline-block;
+			}
+			.bubble.right:after {
+				content: '';
+				height: 0;
+				width: 0;
+				left: 2em;
+				top: -0.75em;
+				position: relative;
+				font-size: 10px;
+				display: inline-block;
+				border-right: 2em solid transparent;
+				border-bottom: 2em solid #333;
+			}
+			.bubble.right.reverse:after {
+				border-bottom: 0;
+				border-right: 2em solid transparent;
+				border-top: 2em solid #333;
+				top: 0.75em;
+			}
+			.anchor.right {
+				margin-left: 1.5em;
+				position: relative;
+				display: inline-block;
+				bottom: 0;
+			}
+			.anchor.right.reverse {
+				margin-left: 1.5em;
+				position: relative;
+				display: inline-block;
+				bottom: 0.5em;
+			}
+			.bubble.left {
+				float: left;
+				margin-left: 1.5em;
+				padding-left: 0;
+			}
+			.bubble.left:before {
+				content: '';
+				height: 0;
+				width: 0;
+				left: -2em;
+				position: relative;
+				font-size: 10px;
+				display: inline-block;
+				border-left: 2em solid transparent;
+				border-top: 2em solid #333;
+			}
+			.bubble.left.reverse:before {
+				border-top: 0;
+				border-left: 2em solid transparent;
+				border-bottom: 2em solid #333;
+			}
+			.anchor.left {
+				float: left;
+			}
+			.anchor.left.reverse {
+				position: relative;
+				display: inline-block;
+				bottom: -2em;
+			}
+			.anchor.top:after {
+				left: -40%;
+				position: relative;
+				content: '';
+				height: 0;
+				width: 0;
+				font-size: 10px;
+				display: inline-block;
+				margin-bottom: -2.4em;
+				border-left: 2em solid #333; 
+				border-top: 2em solid #FFF;
+				border-top: 2em solid transparent;
+			}
+			.anchor.top.reverse:after {
+				border-left: 0;
+				left: -60%;
+				border-right: 2em solid #333; 
+				border-top: 2em solid #FFF;
+				border-top: 2em solid transparent;
+			}
+			.anchor.top {
+				margin-bottom: 1.1em;
+				display: inline-block;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="bubble-wrapper">
+			<div class="bubble bottom">Speech Bubbles in CSS</div>
+			<div class="anchor bottom">Jeremy Johnstone</div>
+		</div>
+		<div class="bubble-wrapper">
+			<div class="bubble bottom reverse">Speech Bubbles in CSS</div>
+			<div class="anchor bottom reverse">Jeremy Johnstone</div>
+		</div>
+		<br>
+		<div class="bubble-wrapper">
+			<div class="anchor top">Jeremy Johnstone</div>
+			<div class="bubble top">Speech Bubbles in CSS</div>
+		</div>
+		<div class="bubble-wrapper">
+			<div class="anchor top reverse">Jeremy Johnstone</div>
+			<div class="bubble top reverse">Speech Bubbles in CSS</div>
+		</div>
+		<br>
+		<div class="bubble-wrapper">
+			<div class="bubble right">Speech Bubbles in CSS</div>
+			<div class="anchor right">Jeremy Johnstone</div>
+		</div>
+		<div class="bubble-wrapper">
+			<div class="bubble right reverse">Speech Bubbles in CSS</div>
+			<div class="anchor right reverse">Jeremy Johnstone</div>
+		</div>
+		<br>
+		<div class="bubble-wrapper">
+			<div class="anchor left">Jeremy Johnstone</div>
+			<div class="bubble left">Speech Bubbles in CSS</div>
+		</div>
+		<div class="bubble-wrapper">
+			<div class="anchor left reverse">Jeremy Johnstone</div>
+			<div class="bubble left reverse">Speech Bubbles in CSS</div>
+		</div>
+	</body>
+</html>
