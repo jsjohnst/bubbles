@@ -29,6 +29,38 @@
 		pre { background: #000; color: #fff; padding: 15px;}
     hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
     .footer { text-align:center; padding-top:30px; font-style: italic; }
+
+	.bubble-wrapper {
+		display: inline-block;
+		position: relative;
+	}
+	.bubble {
+		padding: 1em;
+		background-color: #e1cc23;
+		color: #333;
+		-webkit-border-radius: 8px;
+		-moz-border-radius: 8px;
+		border-radius: 8px;
+		margin-left: 2em;
+	}
+	.anchor:after {
+		left: -3em;
+		position: relative;
+		content: '';
+		height: 0;
+		width: 0;
+		font-size: 10px;
+		display: inline-block;
+		margin-bottom: -2.4em;
+		left: -60%;
+		border-right: 2em solid #e1cc23; 
+		border-top: 2em solid #1e33dc;
+		border-top: 2em solid transparent;
+	}
+	.anchor {
+		margin-bottom: 1.1em;
+		display: inline-block;
+	}
 	</style>
 	
 </head>
@@ -53,12 +85,15 @@
     </div>
 
     <h2>Online Example</h2>
-    <p><a href="bubble-example.html">Speech Bubble Example</a></p>
+	<div class="bubble-wrapper"> 
+		<div class="anchor"><a href="bubble-example.html">Speech Bubble Example</a></div>
+		<div class="bubble">Aren't these bubbles awesome!</div>  
+	</div>
+    
 
-    <h2>Authors</h2>
-<p>Jeremy Johnstone (github@jeremyjohnstone.com)<br/><br/>      </p>
-<h2>Contact</h2>
-<p>Jeremy Johnstone (github@jeremyjohnstone.com)<br/>      </p>
+<h2>Author</h2>
+<p>Jeremy Johnstone (github (at) jeremyjohnstone (dot) com)
+<br/>      </p>
 
 
     <h2>Download</h2>
