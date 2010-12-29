@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>Speech Bubbles</title>
+		<title>Speech Bubble Example</title>
 		<style>
 			.bubble-wrapper {
 				display: inline-block;
@@ -124,6 +124,18 @@
 				border-top: 2em solid #FFF;
 				border-top: 2em solid transparent;
 			}
+			.bubble.top.reverse.big {
+				width: 30em;
+				margin-left: 3em;
+			}
+			.anchor.top.reverse.big:after {
+				left: 9em;
+				margin-bottom: -4.4em;
+				border-right: 0;
+				border-left: 4em solid #333; 
+				border-top: 4em solid #FFF;
+				border-top: 4em solid transparent;
+			}
 			.anchor.top {
 				margin-bottom: 1.1em;
 				display: inline-block;
@@ -166,5 +178,50 @@
 			<div class="anchor left reverse">Jeremy Johnstone</div>
 			<div class="bubble left reverse">Speech Bubbles in CSS</div>
 		</div>
+<br>
+<br>
+<h2>All created from markup similar to the following (order switched for left/top):</h2>
+<div class="bubble-wrapper">
+<pre><div class="anchor top reverse big">
+&lt;div class="bubble-wrapper"&gt; 
+	&lt;div class="bubble"&gt;Speech Bubbles in CSS&lt;/div&gt; 
+	&lt;div class="anchor"&gt;Jeremy Johnstone&lt;/div&gt; 
+&lt;/div&gt;
+</pre></div>
+<div class="bubble top reverse big"><b>With CSS similar to this:</b>
+	<pre>
+	.bubble-wrapper {
+		display: inline-block;
+		position: relative;
+		margin: 1em;
+	}
+	.bubble {
+		padding: 1em;
+		background-color: #333;
+		color: #d3d3d3;
+		-webkit-border-radius: 8px;
+		-moz-border-radius: 8px;
+		border-radius: 8px;
+	}
+	.anchor:after {
+		position: relative;
+		content: '';
+		height: 0;
+		width: 0;
+		font-size: 10px;
+		display: inline-block;
+		margin-bottom: -2.4em;
+		left: -60%;
+		border-right: 2em solid #333; 
+		border-top: 2em solid #FFF;
+		border-top: 2em solid transparent;
+	}
+	.anchor {
+		margin-bottom: 1.1em;
+		display: inline-block;
+	}
+	</pre>
+</div>
+
 	</body>
 </html>
